@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script type="text/javascript" charset="UTF-8" src="Panier.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="Produit.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="Utilisateur.js"></script>
+</head>
+
+<body>
+
+<script>
+/*
+    Types primitifs :
+        string 
+        number 
+        boolean 
+
+        null
+        undefined
+
+    Type primitifs objet :
+        String 
+        Number  
+        Boolean 
+
+
+
+number        ageGuigui = 27
+string        prenomGuigui = guigui
+boolean        estMajeurGuigui = oui
+
+
+
+    POO     
+*/
+
+    var utilisateur = new Utilisateur('guiguidu53');
+
+    var panier = new Panier(utilisateur);
+
+    var souris = new Produit('Souris', "Super souris de la mort qui tue", 50);
+    var tapis  = new Produit('Tapis de souris', null, 15);
+    var ecran  = new Produit('Ecran', "144Hz", 300);
+
+
+    panier.ajouterProduit(souris);
+    panier.ajouterProduit(tapis);
+    panier.ajouterProduit(ecran);
+
+    tapis.setDescription('Une nouvelle description');
+
+    
+
+    
+    var conclusion = " l'utilisateur "+ utilisateur.getUsername() + " a commandé " + panier.getTotalProduits() + " produits et il va taxer " + panier.getTotal();
+        alert(conclusion);
+
+    
+
+</script>
+
+
+
+    
+
+
+
+
+
+
+
+
+    <script>
+        /*
+        var age = null;
+        age = prompt("Quel est votre age ?");
+        
+        if (age > 0 && age <= 6) {
+            alert("Vous êtes un jeune enfant");
+
+        } else if (age > 6 && age <= 11) {
+            alert("Vous êtes en primaire");
+
+        
+        } else if (age > 11 && age <= 17) {
+            alert("Vous êtes au lycée / collège");
+
+        
+        } else if (age > 17 && age <= 120) {
+            alert("Vous êtes presque mort");
+
+        }
+*/
+
+        /*
+        switch (true) {
+            case (age > 0 && age <= 6):
+                alert("nourisson");
+                break;
+            case (age > 6 && age <= 11):
+                alert("gamin");
+                break;
+            case (age > 11 && age <= 17):
+                alert("jeune");
+                break;
+            case (age > 17 && age <= 120):
+                alert("mega vieux");
+                break;
+
+            default: 
+                alert("Vous n'êtes pas vivant");
+                break;
+        }
+*/
+
+    </script>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
